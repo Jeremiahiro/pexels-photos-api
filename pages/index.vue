@@ -106,7 +106,7 @@
 
       <div v-else>
         <div
-          class="lg:grid lg:grid-cols-3 lg:gap-5 px-6 text-white"
+          class="lg:grid lg:grid-cols-3 md:grid-cols-2 lg:gap-5 px-6 text-white"
         >
           <GeneralImageCard 
             v-for="(photo, i) in photos"
