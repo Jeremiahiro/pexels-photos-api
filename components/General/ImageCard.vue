@@ -1,6 +1,7 @@
 <template>
     <div
       class="w-full my-4 lg:my-0 overflow-hidden group relative cursor-pointer"
+      :style="containerHeight(photo) && containerWidth(photo)"
       >
           <img 
             class="object-cover w-full"
