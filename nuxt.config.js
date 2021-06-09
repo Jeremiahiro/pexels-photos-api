@@ -22,6 +22,11 @@ export default {
   css: [
   ],
 
+  generate: {
+    route: [
+      '/posts',
+    ]
+  },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
@@ -39,6 +44,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
   ],
+
 
   axios: {
     baseURL: API_BASE_URL,

@@ -5,12 +5,14 @@
         :class="{'bg-gray-800' : isScrollPassed || isToggled }"
     >
         <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
-            <a class="inline-flex text-white no-underline hover:text-white hover:no-underline" href="#">
+            <nuxt-link 
+                class="inline-flex text-white no-underline hover:text-white hover:no-underline" 
+                :to="{ name: 'index' }">
                 <img class="rounded-lg w-8 h-8 mr-2" src="~/assets/images/pexel_logo.png" alt="">
                 <span class="hidden md:block text-2xl pl-2">
                     Pexels 
                 </span>
-            </a>
+            </nuxt-link>
         </div>
 
         <div
@@ -44,18 +46,19 @@
                     <div
                         class="w-full inline-block py-2 text-white no-underline group relative"
                         >
-                        <button
+                        <nuxt-link
+                            :to="{ name: 'index' }"
                             class="lg:font-semibold font-medium text-base"
                             >
                             <span class="lg:hidden block">Home</span>
                             <span class="hidden lg:block">Explore</span>
-                        </button>
+                        </nuxt-link>
                         <div class="block lg:hidden w-100 my-2 border-b-2"></div>
                         <ul 
                             class="explore-menu lg:origin-top-right lg:absolute lg:right-0 lg:top-10 lg:w-48 block lg:hidden lg:text-black lg:bg-white text-white pt-1 group-hover:block">
                             <li class="">
                                 <nuxt-link 
-                                    :to="{ name: '/' }"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                 >
                                     Discover Photos
@@ -63,7 +66,7 @@
                             </li>
                             <li class="">
                                 <nuxt-link 
-                                    to="/popular"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                 >
                                     Popular Searches
@@ -71,7 +74,7 @@
                             </li>
                             <li class="">
                                 <nuxt-link 
-                                    to="/leaderboard"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 lg:p-0 py-1 no-underline hover:bg-gray-300"
                                 >
                                     Leaderboard
@@ -79,7 +82,7 @@
                             </li>
                             <li class="">
                                 <nuxt-link 
-                                    to="/challenge"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 lg:p-0 py-1 no-underline hover:bg-gray-300"
                                 >
                                     Challenges
@@ -87,7 +90,7 @@
                             </li>
                             <li class="">
                                 <nuxt-link 
-                                    to="/video"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 lg:p-0 py-1 no-underline hover:bg-gray-300"
                                 >
                                     Free Videos
@@ -95,7 +98,7 @@
                             </li>
                             <li class="">
                                 <nuxt-link 
-                                    to="/blog"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                 >
                                     Pexels Blog
@@ -106,7 +109,7 @@
                 </li>
                 <li class="lg:mr-3">
                     <nuxt-link 
-                        to="/licence"
+                        :to="{ name: 'photos' }"
                         class="lg:font-semibold font-medium text-base hidden lg:block inline-block py-2 px-4 text-white no-underline"
                     >
                         Licence
@@ -114,7 +117,7 @@
                 </li>
                 <li class="lg:mr-3">
                     <nuxt-link 
-                        to="/upload"
+                        :to="{ name: 'photos' }"
                         class="lg:font-semibold font-medium text-base hidden lg:block inline-block py-2 px-4 text-white no-underline"
                     >
                         Upload
@@ -136,7 +139,7 @@
                             <ul>
                                 <li class="">
                                     <nuxt-link 
-                                    to="/login"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                         >
                                         Login
@@ -144,7 +147,7 @@
                                 </li>
                                 <li class="">
                                     <nuxt-link 
-                                    to="/join"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                     >
                                         Join
@@ -152,7 +155,7 @@
                                 </li>
                                 <li class="">
                                     <nuxt-link 
-                                    to="/lang"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-flex lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                     >
                                         Change Language
@@ -166,7 +169,7 @@
                                 </li>
                                 <li class="lg:hidden block">
                                     <nuxt-link 
-                                    to="/license"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                     >
                                         Licence
@@ -175,7 +178,7 @@
                                 <div class="block lg:hidden w-100 my-2 border-b-2"></div>
                                 <li class="lg:block hidden">
                                     <nuxt-link 
-                                    to="/api"
+                                    :to="{ name: 'photos' }"
                                     class="w-full font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                         >
                                         Image &amp; Video API
@@ -183,7 +186,7 @@
                                 </li>
                                 <li class="">
                                     <nuxt-link 
-                                    to="/plugin"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                         >
                                         Apps &amp; Plugins
@@ -191,7 +194,7 @@
                                 </li>
                                 <li class="">
                                     <nuxt-link 
-                                    to="/faq"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                     >
                                         FAQ
@@ -199,7 +202,7 @@
                                 </li>
                                 <li class="lg:block hidden">
                                     <nuxt-link 
-                                    to="/partner"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                     >
                                         Partnerships
@@ -207,7 +210,7 @@
                                 </li>
                                 <li class="">
                                     <nuxt-link 
-                                    to="/terms"
+                                    :to="{ name: 'photos' }"
                                     class="w-full lg:font-medium text-base inline-block lg:px-4 lg:py-2 py-1 no-underline hover:bg-gray-300"
                                     >
                                         Imprint &amp; Terms
@@ -282,7 +285,7 @@
                 </li>
                 <li class="mr-3 hidden lg:block">
                     <nuxt-link 
-                        to="/join"
+                        :to="{ name: 'photos' }"
                         class="rounded font-medium text-white text-base px-6 py-2 bg-green-500 hover:bg-green-600">
                         Join
                     </nuxt-link>

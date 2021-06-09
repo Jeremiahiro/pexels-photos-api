@@ -1,12 +1,12 @@
 <template>
   <div>
-    <GeneralHeader />
     <Nuxt />
   </div>
 </template>
 
 <script>
 export default {
+  
 }
 </script>
 

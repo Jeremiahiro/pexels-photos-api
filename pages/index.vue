@@ -24,13 +24,13 @@
                 class="mr-1"
               >
                 <nuxt-link
-                  to="/search"
+                  to="/photos"
                   v-if="!suggestion.indicator"
                 >
                   {{ suggestion.title }},
                 </nuxt-link>
                   <nuxt-link
-                  to="/search"
+                  to="/photos"
                   v-else
                 >
                   {{ suggestion.more }}
@@ -72,7 +72,7 @@
               class="trending-menu origin-top-right absolute right-0 top-10 w-40 hidden text-black bg-white pt-1 group-hover:block">
                 <li class="">
                     <nuxt-link 
-                        :to="{ name: '/' }"
+                        to="/photos"
                         class="w-full font-medium text-base inline-block py-2 px-4 no-underline hover:bg-gray-300"
                     >
                         Trending
@@ -80,7 +80,7 @@
                 </li>
                 <li class="">
                     <nuxt-link 
-                        :to="{ name: '/' }"
+                        to="/photos"
                         class="w-full font-medium text-base inline-block py-2 px-4 no-underline hover:bg-gray-300"
                     >
                         New
